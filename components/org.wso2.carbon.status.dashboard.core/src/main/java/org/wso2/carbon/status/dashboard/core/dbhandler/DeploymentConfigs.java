@@ -41,6 +41,12 @@ public class DeploymentConfigs {
     @Element(description = "polling interval to get real-time statistics of worker in seconds")
     private Integer pollingInterval;
 
+    @Element(description = "pdf header image")
+    private String pdfHeader;
+
+    @Element(description = "pdf header image")
+    private String pdfFooter;
+
     @Element(description = "Metrics Datasource")
     private String metricsDatasourceName;
 
@@ -80,6 +86,22 @@ public class DeploymentConfigs {
 
     public void setPollingInterval(Integer pollingInterval) {
         this.pollingInterval = pollingInterval;
+    }
+
+    public String getPdfHeader() {
+        return pdfHeader;
+    }
+
+    public void setPdfHeader(String pdfeader) {
+        this.pdfHeader = pdfeader;
+    }
+
+    public String getPdfFooter() {
+        return pdfFooter;
+    }
+
+    public void setPdfFooter(String pdfFooter) {
+        this.pdfFooter = pdfFooter;
     }
 
     public String getMetricsDatasourceName() {
